@@ -1,14 +1,4 @@
 <?php
-function get_memory_load() {
-    $free = shell_exec('free');
-    $free = (string)trim($free);
-    $free_arr = explode("\n", $free);
-    $mem = explode(" ", $free_arr[1]);
-    $mem = array_filter($mem);
-    $mem = array_merge($mem);
-    $memory_usage = $mem[2]/$mem[1]*100;
-    return $memory_usage;
-}
 require_once('SystemInfoRAM.php');
 require_once('SystemInfoCPU.php');
 $server_local_datetime		= date("Y-m-d h:i:sa");
