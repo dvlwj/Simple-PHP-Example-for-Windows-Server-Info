@@ -105,7 +105,8 @@
 	function getProcessorServer() {
 		$cpuLoad = getServerLoad();
 		if (is_null($cpuLoad)) {
-			return "CPU load not estimateable (maybe too old Windows or missing rights at Linux or Windows)";
+			return "Failed to measure";
+			//return "CPU load not estimateable (maybe too old Windows or missing rights at Linux or Windows)";
 		}
 		else {
 			return $cpuLoad . "%";
